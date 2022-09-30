@@ -1,0 +1,206 @@
+Abstraction: hiding internal details and showing functionality.
+in java we can achieve abstraction using interfaces and abstract classes.
+
+what is an interface?
+=====================
+it is like requirement specification (features).
+examples :
+
+RBI---> ATM
+====
+ balanceEnquiry
+ withDraw()
+ moneyTransfer()
+ deposit()
+
+interface is a keyword used to create an interface.
+when you create an interface all methods in interface should be abstract.
+
+abstract void withDraw();
+abstract double balanceEnquiry();
+abstraction String moneyTransfer(int amt,string acc1,String acc2);
+
+interface contains only abstract methods and constants.
+constant is a fixed value, once we create a constant we never change its value.
+ex : public static double PI=3.14;
+ex : public static String NAME="sudheer";
+constant names should be always capital: ex PI,
+
+syntax to create an interface:
+
+interface interfaceName{
+ //define abstract methods
+ // constants
+
+
+}
+
+interface Atm{
+
+ abstract void balanceEnquiry();
+ abstract void withDraw();
+ abstract void moneyTransfer();
+ abstract void deposit();
+
+}
+
+class SbiAtm implements Atm{
+
+void balanceEnquiry(){
+sout("balance enquiry");
+}
+
+void withDraw(){
+sout("balance withDraw");
+}
+
+void moneyTransfer(){
+sout("moneyTransfer");
+}
+
+void deposit(){
+sout("deposit");
+}
+
+A class cant extend more than one class. (multiple inheritance)
+class A{
+ m1()
+}
+class B{
+m1()
+}
+
+class C extends A,B{
+ m1() --> confusion for compiler which m1 it should call A's m1() or B's m1()
+}
+
+An interface can have multiple implementation classes.
+
+If a class want to implement an interface then we have to use implements keyword.
+
+interface Service{
+//abstract methods
+}
+
+class ServiceImpl implements Service{
+
+// override Service interface methods
+}
+
+A class can implement multiple interfaces at a time.
+
+interface Service{
+
+
+}
+
+interface Atm{
+
+}
+
+class TestImpl implements Atm,Service{
+
+}
+
+concrete method:
+
+concrete methods have implementations.
+Example:
+
+public void withDraw() {
+        System.out.println("Axis withDraw");
+
+    }
+
+abstract method:
+a method with abstract keyword and without any method body ({ }) or method decleration is called abstract method.
+example
+public abstract void balanceEnquiry();
+
+we can define abstract methods inside class and also inside interface we can define.
+
+abstract keyword we can apply for method and class only.
+
+If we declare any abstract method inside class, then we have to declare that class as abstract.
+
+we can declare a class as abstract even though it doesnot have any abstract methods.
+
+For abstract classes we cant create object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
